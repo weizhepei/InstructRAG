@@ -1,5 +1,3 @@
-.gitignore
-
 # Data Files
 dataset/
 saved_checkpoints/
