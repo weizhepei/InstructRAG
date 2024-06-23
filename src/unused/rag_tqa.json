@@ -1,0 +1,19 @@
+{
+    "long_ans_zero_shot": "Based on your knowledge and the provided information, answer the question:\n{question}</s>\n<|assistant|>\n{pred_long_ans}",
+    "long_ans_zero_shot_llama_3_chat": "Based on your knowledge and the provided information, answer the question:\n{question}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{zero_shot_long_ans}",
+    "long_ans_zero_shot_llama_3_chat_ae_model": "Read the following explanation to answer the given question: {question}\n\n{zero_shot_long_ans}\n\n",
+    "long_ans": "Based on your knowledge and the provided information, answer the question:\n{question}</s>\n<|assistant|>\n{output}",
+    "long_ans_llama_3_chat": "Based on your knowledge and the provided information, answer the question:\n{question}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{output}",
+    "long_ans_llama_3_chat_ae_model": "Read the following explanation to answer the given question: {question}\n\n{output}\n\n",
+    "reference_long_ans": "{reference_long_answer}</s>\n<|user|>\nExtract the final short answer from the above explanation:</s>\n<|assistant|>\n",
+    "pred_long_ans": "{pred_long_ans}</s>\n<|user|>\nExtract the final short answer from the above explanation:</s>\n<|assistant|>\n",
+    "pred_long_ans_llama_3_chat": "{pred_long_ans}<|eot_id|><|start_header_id|>user<|end_header_id|>\n\nExtract the final short answer from the above explanation:<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "prompt_inputs": "Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:",
+    "query_prefix": "<|system|>\n</s>\n<|user|>\n",
+    "query_prefix_llama_3_chat": "<|start_header_id|>user<|end_header_id|>\n\n",
+    "query_prefix_llama_3_chat_for_long_ans_generation": "<|start_header_id|>user<|end_header_id|>\n\nRead the following documents relevant to the given question: {question}\n\n",
+    "query_prefix_llama_3_chat_with_sys_prompt": "<|start_header_id|>system<|end_header_id|>\n\n<|eot_id|><|start_header_id|>user<|end_header_id|>\n\n",
+    "query_prefix_system": "<|system|>\nYou are a question-answering evaluator.</s>\n<|user|>\n",
+    "target_prefix": "Extract the final short answer from the above explanation:",
+    "answer_extraction_llama_3_chat": "Read the following explanation to answer the given question: {question}\n\n{pred_long_ans}\n\n"
+}
