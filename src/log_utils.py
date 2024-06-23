@@ -15,8 +15,6 @@
 import os
 import logging
 
-# from .distributed_utils import is_main_process
-
 class MultiProcessAdapter(logging.LoggerAdapter):
     """
     An adapter to assist with logging in multiprocess.

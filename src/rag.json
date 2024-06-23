@@ -1,10 +1,7 @@
 {
-    "long_ans_zero_shot_llama_3_chat": "Based on your knowledge and the provided information, answer the question:\n{question}?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{zero_shot_long_ans}",
-    "query_prompt": "Based on your knowledge and the provided information, answer the question:\n{question}",
-    "long_ans_llama_3_chat": "Based on your knowledge and the provided information, answer the question:\n{question}?<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n{output}",
-    "query_prefix_llama_3_chat_for_long_ans_generation": "<|start_header_id|>user<|end_header_id|>\n\nRead the following documents relevant to the given question: {question}?\n\n",
-    "assistant_prefix": "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
     "user_prefix": "<|start_header_id|>user<|end_header_id|>\n\n",
+    "assistant_prefix": "<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n",
+    "query_prompt": "Based on your knowledge and the provided information, answer the question:\n{question}",
     "demo_task_instruction": "Your task is to analyze the provided documents and answer the given question. Please generate a brief explanation of how the contents of these documents lead to your answer. If the provided information is not helpful to answer the question, you only need to respond based on your own knowledge, without referring to the documents.\n\nBelow are some examples of how to answer the question:\n\n",
     "demo_prefix": "Read the following documents relevant to the given question: {question}\n\n",
     "demo_postfix": "###\n\nNow it is your turn to analyze the following documents and answer the given question.\n\n",

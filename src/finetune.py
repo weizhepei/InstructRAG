@@ -37,7 +37,7 @@ class DataArguments:
     dataset_name: str = field(
         default=None,
         metadata={
-            "help": "Name of the dataset to load -- the argument `name` passed to `datasets.load_dataset`."
+            "help": "Name of the dataset to load."
         },
     )
 
@@ -120,6 +120,7 @@ def main():
         truncation_side="left",
         use_fast=training_args.use_fast_tokenizer,
     )
+    
     tokenizer.padding = training_args.padding
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token

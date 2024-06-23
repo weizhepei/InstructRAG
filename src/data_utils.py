@@ -14,27 +14,22 @@
 
 import os
 import copy
-import dataclasses
-from typing import Dict, Sequence, Union
-from functools import partial
-
 import json
-import pandas as pd
-import numpy as np
-import torch
-from torch import Tensor
-from torch.utils.data import Dataset
-import transformers
-
+import dataclasses
 from tqdm import tqdm
+from functools import partial
+from typing import Dict, Sequence, Union
 
+import torch
+import numpy as np
+import transformers
 import log_utils, common_utils 
 
 IGNORE_INDEX = -100
 logger = log_utils.get_logger(__name__)
 
 
-class SFTDataset(Dataset):
+class SFTDataset(torch.utils.data.Dataset):
     def __init__(
         self,
         data_list: list[dict],
@@ -44,27 +39,25 @@ class SFTDataset(Dataset):
     ):
         super(SFTDataset, self).__init__()
 
-
         sft_data = preprocess_for_rag(data_list=data_list, prompt_dict=prompt_dict, tokenizer=tokenizer, n_docs=n_docs)
 
         self.input_ids = sft_data["input_ids"]
         self.labels = sft_data["labels"]
 
-        # self.source_lens = torch.tensor(sft_data["source_lens"]) if "source_lens" in sft_data else None
         self.metadata = sft_data["metadata"]
         self.tokenization_metadata = sft_data["tokenization_metadata"]
 
     def __len__(self):
         return len(self.input_ids)
 
-    def __getitem__(self, i) -> Dict[str, Tensor]:
+    def __getitem__(self, i) -> Dict[str, torch.Tensor]:
         return dict(input_ids=self.input_ids[i], labels=self.labels[i])
 
 @dataclasses.dataclass
 class DataCollatorForSFTDataset(object):
     tokenizer: transformers.PreTrainedTokenizer
 
-    def __call__(self, instances: Sequence[Dict]) -> Dict[str, Tensor]:
+    def __call__(self, instances: Sequence[Dict]) -> Dict[str, torch.Tensor]:
 
         input_ids, labels = tuple([instance[key] for instance in instances] for key in ("input_ids", "labels"))
         input_ids = torch.nn.utils.rnn.pad_sequence(
@@ -245,7 +238,6 @@ def _tokenize_fn(strings: Sequence[str], tokenizer: transformers.PreTrainedToken
     )
 
 # Inference Data Utils
-
 
 def format_prompt(
         dataset_name: str,
