@@ -1,5 +1,0 @@
-python==3.10
-torch==2.2.1
-vllm==0.4.1
-transformers==4.41.2
-flash-attn==2.5.6

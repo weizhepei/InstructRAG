@@ -94,7 +94,8 @@ class TrainingArguments(transformers.TrainingArguments):
 def main():
     parser = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
-
+    training_args.fsdp_config=dict(fsdp_transformer_layer_cls_to_wrap=["LlamaDecoderLayer"])
+    TrainingArguments.fsdp_config = training_args.fsdp_config
     ctx_mgr = common_utils.staggered_object_creation(
         local_rank=training_args.local_rank, world_size=training_args.world_size
     )
@@ -120,7 +121,7 @@ def main():
         truncation_side="left",
         use_fast=training_args.use_fast_tokenizer,
     )
-    
+
     tokenizer.padding = training_args.padding
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token

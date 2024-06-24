@@ -1,7 +1,4 @@
-# conda activate instructrag
-
-export DATASET=ASQA
-export CACHE_DIR=/p/llmresearch/huggingface/hub
+DATASET=PopQA
 
 CUDA_VISIBLE_DEVICES=0 python src/inference.py \
   --dataset_name $DATASET \

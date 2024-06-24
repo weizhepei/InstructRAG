@@ -1,5 +1,7 @@
 # Data Files
-dataset/
+dataset/*
+!dataset/README.md
+!dataset/*/demos.json
 saved_checkpoints/
 wandb/
 qa_results/
