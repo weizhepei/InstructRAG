@@ -94,8 +94,7 @@ class TrainingArguments(transformers.TrainingArguments):
 def main():
     parser = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
-    training_args.fsdp_config=dict(fsdp_transformer_layer_cls_to_wrap=["LlamaDecoderLayer"])
-    TrainingArguments.fsdp_config = training_args.fsdp_config
+
     ctx_mgr = common_utils.staggered_object_creation(
         local_rank=training_args.local_rank, world_size=training_args.world_size
     )
@@ -107,7 +106,6 @@ def main():
             cache_dir=training_args.cache_dir,
             low_cpu_mem_usage=True,
             device_map={"": training_args.device.index},
-            torch_dtype=torch.bfloat16 if training_args.bf16 else torch.float32,
         )
 
         model = AutoModelForCausalLM.from_pretrained(model_args.model_name_or_path, **model_kwargs)
@@ -139,12 +137,11 @@ def main():
     )
 
     trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
-    logger.warning("hooray! training finished successfully! now on to model saving.", main_process_only=True)
+    logger.warning("hooray! training finished successfully!\nNow on to model saving -- With mixed precision, FSDP will upcast in the model preparation step, and FSDP will then save checkpoints in the upcasted precision. See: https://huggingface.co/docs/accelerate/en/concept_guides/fsdp_and_deepspeed", main_process_only=True)
 
     trainer.save_state()
     common_utils.safe_save_model_for_hf_trainer(trainer=trainer, output_dir=training_args.output_dir)
     logger.warning("hooray again! model saving worked.", main_process_only=True)
-
 
 if __name__ == "__main__":
     main()

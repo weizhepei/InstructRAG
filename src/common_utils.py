@@ -223,6 +223,7 @@ def safe_save_model_for_hf_trainer(
             # check whether the model is trained using mixed precision
 
             # model = BetterTransformer.reverse(trainer.model)
+            
             state_dict = trainer.model.state_dict()
             if trainer.args.should_save:
                 trainer._save(output_dir, state_dict=state_dict)  # noqa
