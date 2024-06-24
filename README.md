@@ -4,7 +4,10 @@ InstructRAG
 
 <h3 align="center">
 Instructing Retrieval-Augmented Generation with Explicit Denoising <br>
-[<a href="https://arxiv.org/abs/2406.13629">arXiv</a>] [<a href="https://arxiv.org/abs/2406.13629">Website</a>] [<a href="https://huggingface.co/meng-lab/TriviaQA-InstructRAG-FT">Model</a>] [<a href="https://huggingface.co/datasets/meng-lab/InstructRAG">Dataset</a>] [<a href="https://x.com/weizhepei/status/1803992285899620837">X Summary</a>]
+[<a href="https://arxiv.org/abs/2406.13629">arXiv</a>]
+[<a href="https://arxiv.org/abs/2406.13629">Website</a>]
+[<a href="https://github.com/weizhepei/InstructRAG?tab=readme-ov-file#model-checkpoints">Model</a>] [<a href="https://huggingface.co/datasets/meng-lab/InstructRAG">Dataset</a>]
+[<a href="https://x.com/weizhepei/status/1803992285899620837">X Summary</a>]
 </h3>
 
 InstructRAG is a simple yet effective RAG framework that allows LMs to explicitly denoise retrieved contents by generating rationales for better verifiability and trustworthiness. 
@@ -16,7 +19,7 @@ InstructRAG is a simple yet effective RAG framework that allows LMs to explicitl
 - 🤖 **Self-Synthesis**: Leverage instruction-tuned LMs to generate their OWN supervision for denoising.
 - 🔌 **Easy-to-Use**: Support both in-context learning (ICL) and supervised fine-tuning (SFT).
 - 🚀 **Effectiveness**: Up to 8.3% better results across 5 benchmarks ([Table 5](https://arxiv.org/html/2406.13629v1#S3.T5)).
-- 💪 **Noise Robustness**: Robust to increased noise ratios in both training-free and trainable scenarios ([Figure 3](https://arxiv.org/html/2406.13629v1#S3.F3)).
+- 💪 **Noise Robustness**: Robust to increased noise ratios in various scenarios ([Figure 3](https://arxiv.org/html/2406.13629v1#S3.F3)).
 - 🔁 **Task Transferability**: InstructRAG can also solve out-of-domain unseen tasks ([Figure 4](https://arxiv.org/html/2406.13629v1#S3.F4)).
 
 Please see also our [paper](https://arxiv.org/abs/2406.13629) and [X summary](https://x.com/weizhepei/status/1803992285899620837) for more details.
@@ -30,7 +33,7 @@ Please see also our [paper](https://arxiv.org/abs/2406.13629) and [X summary](ht
     - [Model Checkpoints](#model-checkpoints)
 
 ## Installation
-The following script will create an Python virtual environment and install all required packages.
+Run the following script to create a Python virtual environment and install all required packages.
 ```shell
 bash setup.sh
 ```
