@@ -9,15 +9,15 @@ Instructing Retrieval-Augmented Generation with Explicit Denoising <br>
 
 InstructRAG is a simple yet effective RAG framework that allows LMs to explicitly denoise retrieved contents by generating rationales for better verifiability and trustworthiness. 
 
-![](https://github.com/weizhepei/instruct-rag-page/tree/main/static/images/instructrag.pdf)
+![](https://github.com/weizhepei/instruct-rag-page/tree/main/static/images/instructrag.png)
 
 ## **InstructRAG Key Features:**
 
-- 🤖 **Self-Synthesis**: InstructRAG leverages instruction-tuned LMs to generate their OWN supervision for denoising.
-- 🔌 **Easy-to-Use**: InstructRAG can be applied in both in-context learning (ICL) and supervised fine-tuning (SFT).
+- 🤖 **Self-Synthesis**: Leverage instruction-tuned LMs to generate their OWN supervision for denoising.
+- 🔌 **Easy-to-Use**: Support both in-context learning (ICL) and supervised fine-tuning (SFT).
 - 🚀 **Effectiveness**: Up to 8.3% better results across 5 benchmarks ([Table 5](https://arxiv.org/html/2406.13629v1#S3.T5)).
-- 💪 **Noise Robustness**: InstructRAG is robust to increased noise ratios in both training-free and trainable scenarios ([Figure 3](https://arxiv.org/html/2406.13629v1#S3.F3)).
-- 🔁 **Task Transferability**: InstructRAG can solve out-of-domain unseen tasks ([Figure 4](https://arxiv.org/html/2406.13629v1#S3.F4)).
+- 💪 **Noise Robustness**: Robust to increased noise ratios in both training-free and trainable scenarios ([Figure 3](https://arxiv.org/html/2406.13629v1#S3.F3)).
+- 🔁 **Task Transferability**: InstructRAG can also solve out-of-domain unseen tasks ([Figure 4](https://arxiv.org/html/2406.13629v1#S3.F4)).
 
 Please see also our [paper](https://arxiv.org/abs/2406.13629) and [X summary](https://x.com/weizhepei/status/1803992285899620837) for more details.
 
@@ -65,7 +65,7 @@ bash eval.sh
 
 The following case study shows that InstructRAG can effectively identify relevant information from noisy input and leverage its own knowledge to correctly answer questions when required. The red texts denote irrelevant or inaccurate model generations, while the green texts denote contents relevant to the question. 
 
-![](https://github.com/weizhepei/instruct-rag-page/tree/main/static/images/case_study.pdf)
+![](https://github.com/weizhepei/instruct-rag-page/tree/main/static/images/case_study.png)
 
 
 ## Model Checkpoints
