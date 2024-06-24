@@ -9,7 +9,7 @@ Instructing Retrieval-Augmented Generation with Explicit Denoising <br>
 
 InstructRAG is a simple yet effective RAG framework that allows LMs to explicitly denoise retrieved contents by generating rationales for better verifiability and trustworthiness. 
 
-![](https://github.com/weizhepei/instruct-rag-page/tree/main/static/images/instructrag.png)
+![](https://weizhepei.com/instruct-rag-page/static/images/instructrag.png)
 
 ## **InstructRAG Key Features:**
 
@@ -65,8 +65,7 @@ bash eval.sh
 
 The following case study shows that InstructRAG can effectively identify relevant information from noisy input and leverage its own knowledge to correctly answer questions when required. The red texts denote irrelevant or inaccurate model generations, while the green texts denote contents relevant to the question. 
 
-![](https://github.com/weizhepei/instruct-rag-page/tree/main/static/images/case_study.png)
-
+![](https://weizhepei.com/instruct-rag-page/static/images//case_study.png)
 
 ## Model Checkpoints
 Below is the full list of InstructRAG models fine-tuned on each dataset in our work.
