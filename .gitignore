@@ -1,10 +1,9 @@
 # Data Files
 dataset/*
 !dataset/README.md
-!dataset/*/demos.json
 saved_checkpoints/
 wandb/
-qa_results/
+eval_results/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

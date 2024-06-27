@@ -5,8 +5,8 @@ InstructRAG
 <h3 align="center">
 Instructing Retrieval-Augmented Generation with Explicit Denoising <br>
 [<a href="https://arxiv.org/abs/2406.13629">arXiv</a>]
-[<a href="https://arxiv.org/abs/2406.13629">Website</a>]
-[<a href="https://github.com/weizhepei/InstructRAG?tab=readme-ov-file#model-checkpoints">Model</a>] [<a href="https://huggingface.co/datasets/meng-lab/InstructRAG">Dataset</a>]
+[<a href="https://weizhepei.com/instruct-rag-page/">Website</a>]
+[<a href="https://github.com/weizhepei/InstructRAG?tab=readme-ov-file#model-checkpoints">Model</a>] [<a href="https://github.com/weizhepei/InstructRAG/tree/main/dataset">Dataset</a>]
 [<a href="https://x.com/weizhepei/status/1803992285899620837">X Summary</a>]
 </h3>
 
