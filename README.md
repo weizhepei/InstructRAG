@@ -3,7 +3,7 @@ InstructRAG
 </h1>
 
 <h3 align="center">
-Instructing Retrieval-Augmented Generation with Explicit Denoising <br>
+Instructing Retrieval-Augmented Generation via Self-Synthesized Rationales <br>
 [<a href="https://arxiv.org/abs/2406.13629">arXiv</a>]
 [<a href="https://weizhepei.com/instruct-rag-page/">Website</a>]
 [<a href="https://github.com/weizhepei/InstructRAG?tab=readme-ov-file#model-checkpoints">Model</a>] [<a href="https://github.com/weizhepei/InstructRAG/tree/main/dataset">Dataset</a>]
@@ -25,7 +25,7 @@ InstructRAG is a simple yet effective RAG framework that allows LMs to explicitl
 Please see also our [paper](https://arxiv.org/abs/2406.13629) and [X summary](https://x.com/weizhepei/status/1803992285899620837) for more details.
 
 ## 🔗 Quick Links
-- [InstructRAG: Instructing Retrieval-Augmented Generation with Explicit Denoising](#instructrag-key-features)
+- [InstructRAG: Instructing Retrieval-Augmented Generation via Self-Synthesized Rationales](#instructrag-key-features)
     - [Installation](#installation)
     - [Training Script](#training-script)
     - [Evaluation](#evaluation)
@@ -89,7 +89,7 @@ Please cite our paper if you find the repo helpful in your work:
 
 ```bibtex
 @article{wei2024instructrag,
-  title={{InstructRAG}: Instructing Retrieval-Augmented Generation with Explicit Denoising},
+  title={{InstructRAG}: Instructing Retrieval-Augmented Generation via Self-Synthesized Rationales},
   author={Wei, Zhepei and Chen, Wei-Lin and Meng, Yu},
   year={2024}
 }
