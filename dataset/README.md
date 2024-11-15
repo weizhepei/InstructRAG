@@ -8,8 +8,8 @@ You can also directly download the pre-processed datasets (augmented with retrie
 
 Please refer to the [rationale generation script](../generate_rationale.sh) for detailed instructions on preparing data with your own corpus.
 
-## Retrieval on your own corpus
-As stated above, we have provided retrieved documents along with the queries for all datasets used in this work to facilitate easier reproduction. To perform retrieval on your own corpus, the easiest way is to use [Pyserini](https://github.com/castorini/pyserini) with prebuilt indexes. Below are some code snippets for sparse retrieval (e.g., BM25) and dense retrieval (e.g., DPR) for your reference.
+## Retrieval with customized queries
+As stated above, we have provided retrieved documents along with the queries for all datasets used in this work to facilitate easier reproduction. To perform retrieval with customized queries, the easiest way is to use [Pyserini](https://github.com/castorini/pyserini) with prebuilt indexes of retrieval corpus (e.g., Wikipedia). Below are some code snippets for sparse retrieval (e.g., BM25) and dense retrieval (e.g., DPR) for your reference.
 
 - Sparse Retrieval
 ```python
