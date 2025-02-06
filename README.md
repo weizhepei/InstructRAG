@@ -18,9 +18,9 @@ InstructRAG is a simple yet effective RAG framework that allows LMs to explicitl
 
 - 🤖 **Self-Synthesis**: Leverage instruction-tuned LMs to generate their OWN supervision for denoising.
 - 🔌 **Easy-to-Use**: Support both in-context learning (ICL) and supervised fine-tuning (SFT).
-- 🚀 **Effectiveness**: Up to 8.3% better results across 5 benchmarks ([Table 5](https://arxiv.org/html/2406.13629v1#S3.T5)).
-- 💪 **Noise Robustness**: Robust to increased noise ratios in various scenarios ([Figure 3](https://arxiv.org/html/2406.13629v1#S3.F3)).
-- 🔁 **Task Transferability**: InstructRAG can also solve out-of-domain unseen tasks ([Figure 4](https://arxiv.org/html/2406.13629v1#S3.F4)).
+- 🚀 **Effectiveness**: Up to 8.3% better results across 5 benchmarks ([Table 3](https://arxiv.org/html/2406.13629v2#S3.T3)).
+- 💪 **Noise Robustness**: Robust to increased noise ratios in various scenarios ([Figure 3](https://arxiv.org/html/2406.13629v2#S3.F3)).
+- 🔁 **Task Transferability**: InstructRAG can also solve out-of-domain unseen tasks ([Figure 4](https://arxiv.org/html/2406.13629v2#S3.F4)).
 
 Please see also our [paper](https://arxiv.org/abs/2406.13629) and [X summary](https://x.com/weizhepei/status/1803992285899620837) for more details.
 
@@ -88,9 +88,12 @@ If you have any questions related to the code or the paper, feel free to email Z
 Please cite our paper if you find the repo helpful in your work:
 
 ```bibtex
-@article{wei2024instructrag,
-  title={{InstructRAG}: Instructing Retrieval-Augmented Generation via Self-Synthesized Rationales},
-  author={Wei, Zhepei and Chen, Wei-Lin and Meng, Yu},
-  year={2024}
+@inproceedings{
+wei2025instructrag,
+title={Instruct{RAG}: Instructing Retrieval-Augmented Generation via Self-Synthesized Rationales},
+author={Zhepei Wei and Wei-Lin Chen and Yu Meng},
+booktitle={The Thirteenth International Conference on Learning Representations},
+year={2025},
+url={https://openreview.net/forum?id=P1qhkp8gQT}
 }
 ```
